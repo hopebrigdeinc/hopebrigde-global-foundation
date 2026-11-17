@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { ArrowDown,ArrowRight } from "lucide-react";
+export default function Hero(){return <section className="relative flex min-h-[760px] items-end overflow-hidden bg-navy pb-24 pt-40 md:min-h-[850px]">
+ <div className="absolute inset-0"><div className="absolute inset-0 bg-[url('/images/humanitarian-outreach.jpg')] bg-cover bg-center opacity-80"/><div className="absolute inset-0 bg-gradient-to-r from-[#071c39]/95 via-[#0c2c55]/75 to-[#0c2c55]/25"/><div className="absolute inset-0 bg-gradient-to-t from-[#071c39]/65 via-transparent to-black/10"/></div>
+ <div className="container-shell relative z-10 grid items-end gap-12 lg:grid-cols-[1.2fr_.8fr]">
+  <div className="max-w-4xl"><p className="eyebrow mb-7">A humanitarian foundation · Established 2017</p><h1 className="display-title max-w-4xl text-5xl leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[82px]">BRIDGING HOPE.<br/><span className="text-gold">BUILDING A BETTER</span><br/>TOMORROW.</h1><p className="mt-8 max-w-2xl text-base leading-8 text-white/80 md:text-lg">Hopebridge Global Foundation is a humanitarian nonprofit initiative committed to creating meaningful opportunities, restoring hope and improving the quality of life of individuals and underserved communities around the world.</p><div className="mt-9 flex flex-wrap gap-4"><Link href="/about" className="btn btn-primary">Discover our mission <ArrowRight size={16}/></Link><Link href="/impact" className="btn btn-outline">Explore our impact</Link></div></div>
+  <div className="hidden justify-end pb-2 lg:flex"><div className="border-l border-gold/70 pl-5 text-xs leading-6 tracking-wider text-white/70"><span className="mb-2 block text-gold">OUR COMMITMENT</span>Humanity. Dignity.<br/>Opportunity. Sustainable change.</div></div>
+ </div><a href="#welcome" aria-label="Scroll to welcome section" className="absolute bottom-7 left-1/2 -translate-x-1/2 text-white/70"><ArrowDown size={20}/></a>
+ </section>}

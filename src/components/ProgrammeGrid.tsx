@@ -1,0 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
+import {ArrowUpRight} from "lucide-react";
+import {programmes} from "@/lib/content";
+export default function ProgrammeGrid(){return <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">{programmes.map((p,i)=><Link href={`/programmes#${p.slug}`} key={p.slug} className="group block"><div className="relative aspect-[4/5] overflow-hidden bg-ivory"><Image src={p.image} alt={`Placeholder for authentic ${p.title.toLowerCase()} photography`} fill className="object-cover transition-transform duration-700 group-hover:scale-105"/><span className="absolute left-3 top-3 bg-navy px-3 py-2 text-[9px] tracking-widest text-white">0{i+1}</span></div><div className="flex items-start justify-between gap-3 pt-5"><div><h3 className="font-serif text-2xl text-navy">{p.title}</h3><p className="mt-3 text-sm leading-6 text-charcoal/65">{p.description}</p></div><ArrowUpRight className="mt-1 shrink-0 text-gold transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"/></div></Link>)}</div>}
